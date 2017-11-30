@@ -1,0 +1,77 @@
+[v-cloak]{display: none}
+/*
+避免{{}}刷新时闪烁
+这个指令保持在元素上直到关联实例结束编译。和 
+CSS 规则如 [v-cloak] { display: none } 一起用时
+这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕
+*/
+body,ul,h2,h3{margin:0;padding:0;}
+body,html{    background-color: rgba(25, 19, 19, 0.01);
+}
+li{list-style: none;}
+.page_top{position: absolute;
+	      top:0;
+          left: 0;
+          right: 0;
+          height:40px;
+          line-height: 40px;
+          text-align: center;
+          background-color: red; 
+      }
+.main{
+	  width: 600px;
+      top: 40px;
+      margin:40px auto;
+      text-align: left;
+
+}
+.task_input{width: 100%;}
+.big_title{padding:10px 0;clear: both;}
+.task-count li{float: right;
+               padding:5px 15px;
+}
+.task-count li:first-child{float: left;}
+.no_task_tip{display: block;
+             border-bottom: 1px solid #999;
+             padding:5px 0;
+}
+.tasks{background-color: #fff;}
+.view{padding:5px 0;}
+.destroy{float: right;
+         display: none;
+
+}
+.view label{padding:0 10px;
+            width: 80%;
+           display: inline-block;
+           position: relative;
+}
+.view:hover {background-color:#f8f8f8}
+.view:hover .destroy{display: block;}
+.completed{position: relative;}
+.completed:after{content: "";
+                 position: absolute;
+                 left:0;
+                 right:0;
+                 top:50%;
+                 height: 2px;
+                 background-color:#999;
+}
+.completed{color:#999;}
+.edit{position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+     
+      padding: 0 10px;
+      font-size: 16px;
+
+}
+li a{text-decoration: none;
+     color: #000;
+     box-sizing: border-box;
+    
+     padding: 2px;
+}
+li a:hover{ box-shadow: 1px 1px 1px 1px;}
