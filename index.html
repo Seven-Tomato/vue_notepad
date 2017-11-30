@@ -22,9 +22,9 @@
                v-model="todo"
      	       >
      	<ul class="task-count" v-show="All_lists.length">
-     		<li >{{noChecked}}个任务未完成 </li>
+     		<li class="red">{{noChecked}}个任务未完成 </li>
      		<li >
-                 <a href="#all"  class="active">所有任务</a>
+                 <a href="#all">所有任务</a>
          		 <a href="#unfinished">未完成任务</a>
          		 <a href="#finished">完成的任务</a>
             </li>
@@ -32,10 +32,6 @@
      	<h3 class="big_title">任务列表：</h3>
      	<div class="tasks">
      		<span class="no_task_tip" v-show="!All_lists.length">还没有添加任何任务</span>
-     	<!-- 	<span class="no_task_tip tip_toggle">
-     			<input type="checkbox" class="toggle">
-     			<span>全标记未完成</span>
-     		</span> -->
      		<ul class="todo_list">
      			<li class="todo " v-for="item in filteredlist">
      				<div class="view ">

@@ -65,7 +65,7 @@ var lists=access.fetch("key");
                      }).length
             },
             filteredlist:function(){//过滤的时候有三种情况 all finished unfinished 
-                   switch(this.visibility){
+                  /* switch(this.visibility){
                        case "all":
                        return filtered.all(lists);
                        break;
@@ -79,7 +79,9 @@ var lists=access.fetch("key");
                        break;
                        default:
                        return lists;//如果三种都不是默认显示全部
-                   } 
+                   } */
+                   /*直接像下面这样调用就不用像上面一样来判断了*/
+                   return filtered[this.visibility]?filtered[this.visibility](lists):lists;
             }
 	},
 	methods:{
